@@ -451,7 +451,6 @@ class TestPlot(TestCase):
                           plot_pl=False,
                           plot_drawdown=True,
                           superimpose=False,
-                          omit_missing=False,
                           smooth_equity=False,
                           relative_equity=False,
                           show_legend=False).items():
