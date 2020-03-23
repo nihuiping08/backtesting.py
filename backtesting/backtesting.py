@@ -1314,7 +1314,7 @@ class Backtest:
              plot_volume=True, plot_drawdown=False,
              smooth_equity=False, relative_equity=True,
              superimpose: Union[bool, str] = True,
-             resample=True,
+             resample=True, reverse_indicators=False,
              show_legend=True, open_browser=True):
         """
         Plot the progression of the last backtest run.
@@ -1373,6 +1373,9 @@ class Backtest:
         used to resample, overriding above numeric limitation.
         Note, all this only works for data with a datetime index.
 
+        If `reverse_indicators` is `True`, the indicators below the OHLC chart
+        are plotted in reverse order of declaration.
+
         [Pandas offset string]: \
             https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects
 
@@ -1403,5 +1406,6 @@ class Backtest:
             relative_equity=relative_equity,
             superimpose=superimpose,
             resample=resample,
+            reverse_indicators=reverse_indicators,
             show_legend=show_legend,
             open_browser=open_browser)
